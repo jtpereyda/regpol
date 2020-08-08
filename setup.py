@@ -16,7 +16,7 @@ setup(
     description="Read Windows Registry.pol files",
     maintainer="Joshua Pereyda",
     maintainer_email="joshua.t.pereyda@gmail.com",
-    url="https://github.com/jtpereyda/pyregpol",
+    url="https://github.com/jtpereyda/regpol",
     packages=find_packages(exclude=[]),
     install_requires=[
         "click",

@@ -1,4 +1,4 @@
-# pyregpol
+# regpol
 
 Read Registry.pol files on Linux (or anywhere Python runs!). Not to be confused with [regpol](https://petri.com/regpol).
 
@@ -9,7 +9,7 @@ Requires Python 3.7 or greater.
 Using [pipx](https://github.com/pipxproject/pipx):
 
 ```
-pipx install pyregpol
+pipx install regpol
 ```
 
 ## Example
