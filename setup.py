@@ -10,10 +10,33 @@ from setuptools import find_packages, setup
 setup_dir = os.path.abspath(os.path.dirname(__file__))
 
 
+def find_version(*path_elements):
+    """Search a file for `__version__ = 'version number'` and return version.
+
+    @param path_elements: Arguments specifying file to search.
+
+    @return: Version number string.
+    """
+    path = os.path.join(setup_dir, *path_elements)
+    for line in open(path):
+        for match in re.finditer(r"__version__\s*=\s(.*)$", line):
+            return ast.literal_eval(match.group(1))
+    raise RuntimeError("version string not found in {0}".format(path))
+
+
+def get_long_description():
+    descr = []
+    for fname in "README.rst", "CHANGELOG.rst":
+        with open(os.path.join(setup_dir, fname), encoding="utf-8") as f:
+            descr.append(f.read())
+    return "\n\n".join(descr)
+
+
 setup(
     name="regpol",
-    version="0.1.0",
+    version=find_version("regpol", "__init__.py"),
     description="Read Windows Registry.pol files",
+    long_description=get_long_description(),
     maintainer="Joshua Pereyda",
     maintainer_email="joshua.t.pereyda@gmail.com",
     url="https://github.com/jtpereyda/regpol",
