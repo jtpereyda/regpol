@@ -31,6 +31,10 @@ def get_long_description():
             descr.append(f.read())
     return "\n\n".join(descr)
 
+extra_requirements = {
+    "dev": ["tox", "flake8", "check-manifest"],
+}
+
 
 setup(
     name="regpol",
@@ -44,7 +48,7 @@ setup(
     install_requires=[
         "click",
     ],
-    extras_require={},
+    extras_require=extra_requirements,
     python_requires=">=3.7",
     entry_points={"console_scripts": ["regpol=regpol:cli"]},
     classifiers=[
