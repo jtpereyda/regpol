@@ -1,4 +1,4 @@
-include *.py *.rst *.toml *.txt tox.ini
+include *.py *.rst *.toml *.txt tox.ini LICENSE
 
 exclude .readthedocs.yml .travis.yml codecov.yml
 prune docs/_build
