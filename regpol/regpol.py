@@ -28,9 +28,9 @@ REG_LINK = 6 # /* symbolic link (UNICODE) */
 REG_MULTI_SZ = 7 # /* multiple strings, delimited by \0, terminated by \0\0 (ASCII) */
 REG_RESOURCE_LIST = 8 # /* resource list? huh? */
 REG_FULL_RESOURCE_DESCRIPTOR = 9 # /* full resource descriptor? huh? */
-REG_RESOURCE_REQUIREMENTS_LIST = 1 # 
-REG_QWORD = 1 # 	/* QWORD in little endian format */
-REG_QWORD_LITTLE_ENDIAN = 1 # 	/* QWORD in little endian format */
+REG_RESOURCE_REQUIREMENTS_LIST = 10 #
+REG_QWORD = 11 # 	/* QWORD in little endian format */
+REG_QWORD_LITTLE_ENDIAN = 11 # 	/* QWORD in little endian format */
 
 reg_types = {
         REG_NONE: "REG_NONE",
@@ -44,9 +44,9 @@ reg_types = {
         REG_MULTI_SZ: "REG_MULTI_SZ",
         REG_RESOURCE_LIST: "REG_RESOURCE_LIST",
         REG_FULL_RESOURCE_DESCRIPTOR: "REG_FULL_RESOURCE_DESCRIPTOR",
-        # REG_RESOURCE_REQUIREMENTS_LIST: "REG_RESOURCE_REQUIREMENTS_LIST",
+        REG_RESOURCE_REQUIREMENTS_LIST: "REG_RESOURCE_REQUIREMENTS_LIST",
         # REG_QWORD: "REG_QWORD",
-        # REG_QWORD_LITTLE_ENDIAN: "REG_QWORD_LITTLE_ENDIAN",
+        REG_QWORD_LITTLE_ENDIAN: "REG_QWORD_LITTLE_ENDIAN",
 }
 
 @click.command()
